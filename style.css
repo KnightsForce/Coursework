@@ -1,0 +1,461 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	background: url('files/image/wall_bg.png') no-repeat;
+	background-size: 100% 900px;
+}
+
+#body {
+	width: 1024px;
+	height: 768px;
+	margin: 0 auto;
+	position: relative;
+
+}
+
+#clock {
+	background: url('files/image/clock.png') no-repeat;
+	background-size: 140px 90px; 
+	width: 140px;
+	height: 90px;
+	position: absolute;
+	top: 20px;
+	left: 500px;
+
+}
+
+#clock .time {
+	font-size: 27px;
+	color: green;
+	width: 99px;
+	height: 40px;
+	position: absolute;
+	top: 32%;
+	left: 16%;
+}
+
+#clock .time span {
+	display: inline-block;
+}
+
+#window_ {
+	background: url('files/image/window.png') no-repeat;
+	position: absolute;
+	top: 100px;
+	left: 30px;
+	width: 299px;
+	height: 353px;
+}
+
+#blinds {
+	position: absolute;
+	top: 70px;
+	left: -15px;
+	width: 385px;
+	height: 385px;
+	overflow: hidden;
+}
+
+#blinds #blinds-top {
+	background: url('files/image/blinds-top.png');
+	background-size: 383px 16px;
+	position: absolute;
+	width: 385px;
+	height: 16px;
+}
+
+#blinds #blinds-body-wrapper {
+	position: absolute;
+	left: 20px;
+	width: 350px;
+	height: 426px;
+
+	overflow: hidden;
+}
+
+#blinds #blinds-body-wrapper #blinds-body {
+	background: url('files/image/blinds-body.png');
+	background-size: 350px 326px;
+	position: relative;
+	top: -65%;
+	width: 350px;
+	height: 326px;
+}
+
+#blinds #cord-wrapper {
+	position: absolute;
+	right: -2px;
+	top: 12px;
+	width: 15px;
+	height: 315px;
+	overflow: hidden;
+}
+
+#blinds #cord {
+	background: url('files/image/cord.png'); 
+	background-size: 12px 315px;
+	width: 15px;
+	height: 315px;
+	position: relative;
+	top: -80%;
+	cursor: pointer;
+}
+
+#board_construction_wrapper {
+	position: absolute;
+	right: -500px;
+	bottom: 10px;
+	width: 820px;
+}
+
+#board_construction_wrapper #board_construction {
+	background: url('files/image/board_construction.png') no-repeat;
+	background-size: 700px 632px;
+	width: 700px;
+	height: 632px;
+}
+
+
+#board_construction_wrapper #canvas_div .active_layer {
+	border: 1px solid gray;
+}
+
+#canvas_div {
+	position: absolute;
+	left: 18px;
+	top: 15px;
+	width: 660px;
+	height: 383px;
+}
+
+#panel {
+	position: absolute;
+	top: -500px;
+	left: 75px;
+}
+
+.wires {
+	background: url('files/image/wires.png') no-repeat;
+	background-size: 70px 300px;
+	position: absolute;
+	left: 16px;
+	width: 70px;
+	height: 200px;
+}
+
+#panel #display {
+	background-size: 100px 300px;
+	position: absolute;
+	top: 98px;
+	width: 100px;
+	height: 300px;
+}
+
+#panel #display img {
+	position: absolute;
+	z-index: 1;
+}
+
+#panel #display .display_on {
+	opacity: 0;
+	z-index: 1;
+}
+
+#panel #display .tools {
+	position: absolute;
+	z-index: 0;
+}
+
+#panel #display #arrow_move {
+	width: 27px;
+	height: 24px;
+	top: 25px;
+	left: 15px;
+	transform': rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+}
+
+#panel #display #rect_newLayer {
+	border: 2px dashed black;
+	width: 20px;
+	height: 20px;
+	top: 25px;
+	left: 55px;
+}
+
+#panel #display #brush {
+	width: 27px;
+	height: 24px;
+	top: 70px;
+	left: 15px;
+}
+
+#panel #display #eraser {
+	width: 27px;
+	height: 24px;
+	top: 70px;
+	left: 55px;
+	transform': rotate(7deg);
+	-moz-transform: rotate(7deg);
+	-ms-transform: rotate(7deg);
+	-webkit-transform: rotate(7deg);
+	-o-transform: rotate(7deg);
+
+}
+
+#panel #display #fill {
+	width: 27px;
+	height: 27px;
+	top: 115px;
+	left: 15px;
+}
+
+#panel #display #color {
+	background-color: black;
+	width: 25px;
+	height: 25px;
+	border: 2px solid black;
+	top: 115px;
+	left: 55px;
+}
+
+#panel #display #thic_line{
+	background-color: rgb(53,53,53);;
+	border: 1px solid rgb(53,53,53);
+	border-radius: 3px;
+	width: 25px;
+	height: 5px;
+	top: 160px;
+	left: 15px;
+}
+
+#panel #display #create_layer {
+	width: 25px;
+	height: 25px;
+	left: 15px;
+	bottom: 75px;
+}
+
+#display hr {
+	width: 90%;
+	bottom: 65px;
+	z-index: 2;
+
+}
+
+#panel #display #save {
+	width: 35px;
+	height: 35px;
+	bottom: 20px;
+	left: 30px;
+}
+
+#panel_2 {
+	position: absolute;
+	top: -500px;
+	right: 170px;
+}
+
+#display_layers {
+	background: url('files/image/display_on.png');
+	background-size: 120px 200px;
+	width: 120px;
+	height: 200px;
+	position: absolute;
+	top: 120px;
+	overflow: hidden;
+}
+
+#display_layers ul {
+	width: 104px;
+	height: 180px;
+	margin: 10px 10px;
+	margin-left: 8px;
+	position: relative;
+	top: 0px;
+	overflow: auto; 
+}
+
+
+.list_layers {
+	font-size: 18px;
+	text-align: center;
+	width: 80px;
+	height: 20px;
+	padding: 5px 0; 
+	border: 1px solid black;
+	border-left: none;
+	cursor: pointer;
+	position: relative;
+	list-style: none;
+}
+
+#display_layers ul .select_layer {
+	background: rgb(49,156,255);
+}
+
+#colors_container {
+	background-color: #4b4a4a;
+	width: 90px;
+	position: absolute;
+	overflow: hidden;
+	display: none;
+	opacity: 0;
+	z-index: 999;
+}
+
+#colors_container .colors {
+	width: 20px;
+	height: 20px;
+	margin: 3px;
+	border: 2px solid white;
+	float: left;
+}
+
+#colors_container .colors#color1 {
+	background-color: white; 
+}
+
+#colors_container .colors#color2 {
+	background-color: silver; 
+}
+
+#colors_container .colors#color3 {
+	background-color: gray; 
+}
+
+#colors_container .colors#color4 {
+	background-color: black; 
+}
+
+#colors_container .colors#color5 {
+	background-color: yellow; 
+}
+
+#colors_container .colors#color6 {
+	background-color: orange; 
+}
+
+#colors_container .colors#color7 {
+	background-color: pink; 
+}
+
+#colors_container .colors#color8 {
+	background-color: red; 
+}
+
+#colors_container .colors#color9 {
+	background-color: maroon; 
+}
+
+#colors_container .colors#color10 {
+	background-color: fuchsia; 
+}
+
+#colors_container .colors#color11 {
+	background-color: mediumpurple; 
+}
+
+#colors_container .colors#color12 {
+	background-color: purple; 
+}
+
+#colors_container .colors#color13 {
+	background-color: lime; 
+}
+
+#colors_container .colors#color14 {
+	background-color: green; 
+}
+
+#colors_container .colors#color15 {
+	background-color: teal; 
+}
+
+#colors_container .colors#color16 {
+	background-color: aqua; 
+}
+
+#colors_container .colors#color17 {
+	background-color: blue; 
+}
+
+#colors_container .colors#color18 {
+	background-color: darkblue; 
+}
+
+#colors_container .colors#color19 {
+	background-color: gold; 
+}
+
+#colors_container .colors#color20 {
+	background-color: brown; 
+}
+
+#line_container {
+	background-color: rgba(125,125,125,0.5);
+	width: 100px;
+	height: 150px;
+	position: absolute;
+	display: none;
+	overflow: auto;
+	z-index: 999;
+}
+
+.lines {
+	width: 80px;
+	margin: 10px;
+}
+
+#line_container #line1 {
+	background-color: black;
+	height: 5px;
+}
+
+#line_container #line2 {
+	background-color: black;
+	height: 10px;
+}
+
+#line_container #line3 {
+	background-color: black;
+	height: 15px;
+}
+
+#line_container #line4 {
+	background-color: black;
+	height: 20px;
+}
+
+#line_container #line5 {
+	background-color: black;
+	height: 25px;
+}
+
+#cursor_eraser {
+	background-color: white;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	display: none;
+	z-index: 15000;
+}
+
+canvas.layers {
+	position: absolute;
+}
+
+canvas#layer_0 {
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
