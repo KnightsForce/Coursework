@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+alert(1)
 var layer_id = 1;
 var number_layer = 1;
 var data_number_layer = 1;
@@ -100,7 +100,6 @@ var thic_line = $('#thic_line');
 	});
 
 //-----------/arrow_move-------------------------------------
-alert(1);
 //-----------rect_newLayer-----------------------------------
 
 	var rect_newLayer = $('#rect_newLayer');
