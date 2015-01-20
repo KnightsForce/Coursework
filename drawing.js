@@ -1,8 +1,5 @@
 $(document).ready(function() {
-alert(1)
 var layer_id = 1;
-var number_layer = 1;
-var data_number_layer = 1;
 var thic_line = $('#thic_line');
 
 //-----Нулевой слой-----
@@ -122,7 +119,7 @@ var thic_line = $('#thic_line');
 
 			$('.active_layer').removeClass('active_layer');
 
-			newLayer(pageY-5, pageX-5);
+			var newCanvas = newLayer(pageY-5, pageX-5);
 
 			$(document).on('mousemove.tools.rect_newLayer', function(e){
 
@@ -341,7 +338,6 @@ var thic_line = $('#thic_line');
 
 	$('#create_layer').on('click.create_layer', function() {
 
-
 		$('.active_layer').removeClass('active_layer');
 			newLayer(0, 0);
 	})
@@ -402,6 +398,8 @@ var thic_line = $('#thic_line');
 			$('.select_layer').removeClass('select_layer');
 
 			$('<li>Слой '+layer_id+'</li>').attr({'data-number-layer': layer_id}).addClass('list_layers select_layer').prependTo('#display_layers ul');	
+		
+		return newCanvas;
 	}
 //-----------/Прочие функции---------------------------------
 
