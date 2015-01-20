@@ -100,7 +100,7 @@ var thic_line = $('#thic_line');
 	});
 
 //-----------/arrow_move-------------------------------------
-
+alert(1);
 //-----------rect_newLayer-----------------------------------
 
 	var rect_newLayer = $('#rect_newLayer');
@@ -123,13 +123,7 @@ var thic_line = $('#thic_line');
 
 			$('.active_layer').removeClass('active_layer');
 
-			var newCanvas = $('<canvas></canvas>').appendTo(canvas_div)
-							.attr({'id': 'layer_'+(layer_id++), 'width':''+0+'px', 'height': ''+0+'px',})
-							.addClass('layers active_layer').css({'top': pageY-5, 'left': pageX-5, 'z-index': $('.layers').length});
-
-			$('.select_layer').removeClass('select_layer');
-
-			$('<li>Слой ' + number_layer++ + '</li>').attr({'data-number-layer': data_number_layer++}).addClass('list_layers select_layer').prependTo('#display_layers ul');
+			newLayer(pageY-5, pageX-5);
 
 			$(document).on('mousemove.tools.rect_newLayer', function(e){
 
@@ -350,17 +344,11 @@ var thic_line = $('#thic_line');
 
 
 		$('.active_layer').removeClass('active_layer');
-			var newCanvas = $('<canvas></canvas>').appendTo(canvas_div)
-							.attr({'id': 'layer_'+(layer_id++), 'width':''+canvas_div.width()+'px', 'height': ''+canvas_div.height()+'px',})
-							.addClass('layers active_layer').css({'top': 0, 'left': 0, 'z-index': $('.layers').length});
-
-			$('.select_layer').removeClass('select_layer');
-
-			$('<li>Слой ' + number_layer++ + '</li>').attr({'data-number-layer': data_number_layer++}).addClass('list_layers select_layer').prependTo('#display_layers ul');
-
+			newLayer(0, 0);
 	})
 
 //-----------/create_layer-----------------------------------
+
 
 //------------delete-----------------------------------------
 
@@ -403,6 +391,18 @@ var thic_line = $('#thic_line');
 	function offToolsHandlers() {
 		$(document).off('.tools');
 		canvas_div.off('.tools');
+	}
+
+
+	function newLayer(top, left) {
+		$('.active_layer').removeClass('active_layer');
+			var newCanvas = $('<canvas></canvas>').appendTo(canvas_div)
+							.attr({'id': 'layer_'+(layer_id++), 'width':''+canvas_div.width()+'px', 'height': ''+canvas_div.height()+'px',})
+							.addClass('layers active_layer').css({'top': top, 'left': left, 'z-index': $('.layers').length});
+
+			$('.select_layer').removeClass('select_layer');
+
+			$('<li>Слой '+layer_id+'</li>').attr({'data-number-layer': layer_id}).addClass('list_layers select_layer').prependTo('#display_layers ul');	
 	}
 //-----------/Прочие функции---------------------------------
 
